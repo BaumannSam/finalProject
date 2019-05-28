@@ -9,7 +9,7 @@ class Stars extends GameObject {
   }
   void show(){
     fill(255);
-    rect(x,y,dy,dx);
+    rect(x,y,dy,dy);
   }
   void act() {
     x = x + dx;
