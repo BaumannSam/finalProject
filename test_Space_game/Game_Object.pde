@@ -14,7 +14,7 @@ abstract class GameObject {
     
   }
   
-  boolean hasDied(){
+  boolean delete(){
     return false;
   }
   

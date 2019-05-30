@@ -7,16 +7,16 @@ class Stars extends GameObject {
     dx = 0;
     dy = random(3,5);
   }
-  void show(){
+  void show(){ //overides Game Objet
     fill(255);
     rect(x,y,dy,dy);
   }
-  void act() {
+  void act() { //overides Game Objet
     x = x + dx;
     y = y + dy;
  }
  
- boolean hasDied(){
+ boolean delete(){
    return y > height;
  }
 }
