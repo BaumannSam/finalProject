@@ -2,7 +2,7 @@ class Stars extends GameObject {
   
   
   Stars() {
-    x = random(0, width);
+    x = random(0,width);
     y = 0;
     dx = 0;
     dy = random(3,5);

@@ -9,7 +9,7 @@ class ship extends GameObject {
   
   void show() {
     fill(0,0,255);
-    rect(x,y,30,50);
+    rect(x,y,20,30);
     //Add custom ship skin
     
   }
