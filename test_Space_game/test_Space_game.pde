@@ -17,6 +17,7 @@ void setup() {
   //Player Ship Stuff
   playerShip = new ship();
   engine.add(playerShip);
+  engine.add(new launcher());
   
 }
 
@@ -39,6 +40,7 @@ void draw() {
 
 //Temp game objects, Current obj (Star)
   engine.add(new Stars());
+  
 }
 
 ///////////////////////////////////////////////////////////////////// 
