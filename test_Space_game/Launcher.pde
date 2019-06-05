@@ -2,7 +2,7 @@ class launcher extends GameObject {
 
   launcher() {
     x = width/2;
-    y = 100;
+    y = -50;
     dx = 0;
     dy = 0;
   }
@@ -23,9 +23,7 @@ class launcher extends GameObject {
       singleEnemy(500);
     } else if (frameCount < 2000 ) {
      // doubleEnemy();
-      // dosent work 
-      //while(frameCount > 2000){
-      //randomEnemy();
+     randomEnemy();
       
     }
   }
@@ -43,7 +41,8 @@ class launcher extends GameObject {
   void randomEnemy() {
     x = random(50, width-50);
     if (frameCount % 50 == 0) {
-      engine.add(new enemy(x, y));
+      engine.add(new Fast_enemy(x, y));
+      frameCount=1500;
     }
   }
 
