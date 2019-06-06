@@ -20,10 +20,11 @@ class launcher extends GameObject {
     } else if (frameCount < 1000) {
       singleEnemy(300);
     } else if (frameCount < 1500) {
-      singleEnemy(500);
+      randomEnemySingle();
     } else if (frameCount < 2000 ) {
-     // doubleEnemy();
      randomEnemy();
+     randomEnemySingle();
+     
       
     }
   }
@@ -34,8 +35,13 @@ class launcher extends GameObject {
       engine.add(new enemy(x, y));
     }
   }
-
-  void doubleEnemy() {
+  
+  void randomEnemySingle() {
+    x = random(50, width-50);
+    if (frameCount % 50 == 0) {
+      engine.add(new enemy(x, y));
+      frameCount=1500;
+    }
   }
 
   void randomEnemy() {

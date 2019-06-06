@@ -5,6 +5,7 @@ class ship extends GameObject {
   y=height/2;
   dx=0;
   dy=0;
+  hp=5;
   }
   
   void show() {
@@ -27,10 +28,10 @@ class ship extends GameObject {
     
     x = x + dx;
     y = y + dy;
-    
   }
-  
-  boolean Died(){ //Added for later when enemys added
-    return false;
- }
+    
+  boolean deleted(){ 
+    return hp <= 0;
+  }
 }
+ 
